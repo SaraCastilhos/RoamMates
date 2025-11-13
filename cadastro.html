@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome (CDN - versão gratuita) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
-
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -32,36 +28,34 @@
 
     <div class="social-login">
       <p>Ou entre com:</p>
-      <button class="google"><i class="fab fa-google"></i></a>Google</button>
-      <button class="facebook"><i class="fab fa-facebook"></i></a>Facebook</button>
+      <button class="google"><i class="fab fa-google"></i> Google</button>
+      <button class="facebook"><i class="fab fa-facebook"></i> Facebook</button>
     </div>
   </div>
 
+  <script>
+    document.getElementById('formCadastro').addEventListener('submit', e => {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim().toLowerCase();
+      const senha = document.getElementById('senha').value;
+
+      let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      if (usuarios.find(u => u.email === email)) {
+        alert('Este e-mail já está cadastrado.');
+        return;
+      }
+
+      const novoUsuario = { nome, email, senha };
+      usuarios.push(novoUsuario);
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+      localStorage.setItem('usuarioLogado', JSON.stringify(novoUsuario));
+      alert('Cadastro realizado com sucesso!');
+      window.location.href = 'index.html';
+    });
+  </script>
 </body>
-
-</html>
-<script>
-  document.getElementById('formCadastro').addEventListener('submit', e => {
-    e.preventDefault();
-    const nome = nome.value.trim();
-    const email = document.getElementById('email').value.trim().toLowerCase();
-    const senha = document.getElementById('senha').value;
-
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    if (usuarios.find(u => u.email === email)) {
-      alert('Este e-mail já está cadastrado.');
-      return;
-    }
-
-    const novoUsuario = { nome, email, senha };
-    usuarios.push(novoUsuario);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-    localStorage.setItem('usuarioLogado', JSON.stringify(novoUsuario));
-    alert('Cadastro realizado com sucesso!');
-    window.location.href = 'index.html';
-  });
-</script>
-</body>
-
 </html>
