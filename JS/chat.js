@@ -14,7 +14,7 @@ if (usuarioLogado) {
 const contatos = [
   { nome: "Selena Dias", usuario: "selena_dias", foto: "https://randomuser.me/api/portraits/women/44.jpg" },
   { nome: "Lucas Ian", usuario: "lucas_ian", foto: "https://randomuser.me/api/portraits/men/32.jpg" },
-  { nome: "Pierre Silva", usuario: "pierre_silva", foto: "/IMG/Pierre.png" },
+  { nome: "Ana S.", usuario: "ana_s", foto: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe" },
   { nome: "Riana Anjos", usuario: "riana_anjos", foto: "https://randomuser.me/api/portraits/women/56.jpg" }
 ];
 
