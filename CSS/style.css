@@ -338,6 +338,16 @@ nav ul li a.ativo {
   color: #9ca3af;
 }
 
+/* Rodapé menor */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
 /* ======= Responsividade ======= */
 @media (max-width: 768px) {
 

@@ -116,16 +116,6 @@ ul {
   border: 1px solid #ccc;
 }
 
-/* ===== RODAPÉ ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #fff;
-  color: #666;
-  font-size: 0.9rem;
-  border-top: 1px solid #eee;
-}
-
 @media (max-width: 600px) {
   .foto-perfil {
     width: 70px;
