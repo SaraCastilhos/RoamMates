@@ -8,7 +8,7 @@ body {
 }
 
 .auth-container {
-  width: 1000%;
+  width: 100%;
   max-width: 400px;
   background-color: #fff;
   padding: 40px 30px;
@@ -99,4 +99,11 @@ i {
 .facebook {
   background: #1876f2c5;
   color: white;
+}
+
+@media (max-width: 768px) {
+
+  .auth-container {
+    max-width: 75vmin;
+  }
 }
