@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Viajante - RoamMates</title>
+
+  <link rel="stylesheet" href="/CSS/perfil.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="/IMG/_LOGO_ (1).png" alt="Logo RoamMates">
+      <h1>Roam<span style="color: black;">Mates</span></h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="viajantes.html">Viajantes</a></li>
+        <li><a href="grupos.html">Grupos</a></li>
+        <li><a id="linkLogin" href="login.html">Entrar / Cadastrar</a></li>
+        <li id="usuarioLogado" style="display:none;">
+          <a id="linkPerfil" href="perfil.html" class="ativo"><span id="nomeUsuario"></span></a>
+          <button id="btnSair" class="btn-sair"><a href="index.html" style="color: white;">Sair</a></button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Capa de viagem" class="foto-capa">
+
+  <main class="perfil-container">
+    <div class="capa">
+      <div class="foto-perfil-container"">
+        <img id=" fotoPerfil" src="/IMG/user-default.png" alt="Foto de perfil" class="foto-perfil">
+        <input type="file" id="inputFoto" accept="image/*">
+      </div>
+    </div>
+
+    <section class="dados-perfil">
+      <h2 id="nomePerfil">Usuário</h2>
+      <p id="emailPerfil" class="email"></p>
+
+      <textarea id="bioPerfil" placeholder="Escreva uma breve biografia..."></textarea>
+
+      <div class="botoes1">
+        <button id="btnAmigo"> Adicionar como amigo</button>
+        <button id="btnMensagem"><a href="chat.html">Mensagens</a></button>
+        <button id="btnSalvar">Salvar alterações</button>
+      </div>
+    </section>
+
+    <section class="interesses">
+      <h3>Interesses</h3>
+      <input type="text" id="novoInteresse" placeholder="Adicionar novo interesse...">
+      <button id="btnAddInteresse">Adicionar</button>
+      <div id="listaInteresses" class="lista-tags"></div>
+    </section>
+
+    <section class="viagens">
+      <div class="viagens-passadas">
+        <h3>Viagens Anteriores</h3>
+        <input type="text" id="addViagemPassada" placeholder="Adicionar destino anterior...">
+        <button id="btnAddPassada">Adicionar</button>
+        <ul id="viagensPassadas" class="lista-tags"></ul>
+      </div>
+
+      <div class="viagens-futuras">
+        <h3>Próximas Viagens</h3>
+        <input type="text" id="addViagemFutura" placeholder="Adicionar próximo destino...">
+        <button id="btnAddFutura">Adicionar</button>
+        <ul id="viagensFuturas" class="lista-tags"></ul>
+      </div>
+    </section>
+
+    <section class="avaliacoes">
+      <h3>Comentários de Viajantes</h3>
+      <ul id="listaComentarios"></ul>
+
+      <div class="novo-comentario">
+        <textarea id="comentarioTexto" placeholder="Deixe seu comentário..."></textarea>
+        <div class="botoes1">
+          <button id="btnEnviarComentario">Enviar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 RoamMates • Conectando viajantes pelo mundo</p>
+    </footer>
+  </main>
+  <script src="/JS/perfil.js"></script>
+</body>
+
+</html>

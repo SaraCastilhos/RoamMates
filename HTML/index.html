@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoamMates - Encontre sua companhia de viagem</title>
+
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (CDN - versão gratuita) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- ======= Cabeçalho ======= -->
+  <header>
+    <div class="logo">
+      <img src="/IMG/_LOGO_ (1).png" alt="Logo RoamMates">
+      <h1>Roam<span style="color: black;">Mates</span></h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="viajantes.html">Viajantes</a></li>
+        <li><a href="grupos.html">Grupos</a></li>
+        <li><a id="linkLogin" href="login.html">Entrar / Cadastrar</a></li>
+        <li id="usuarioLogado" style="display:none;">
+          <a id="linkPerfil" href="perfil.html"><span id="nomeUsuario"></span></a>
+          <button id="btnSair" class="btn-sair">Sair</button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Campo de busca -->
+    <div class="busca">
+      <input type="text" id="campoBusca" placeholder="Buscar destino, cidade ou viajante...">
+      <button id="btnBuscar" aria-label="Buscar">
+        <i class="fa fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- ======= Banner Principal ======= -->
+  <section class="banner">
+    <div class="banner-texto">
+      <h2>Viajar é melhor com companhia</h2>
+      <p>Encontre seu parceiro de viagem ideal!</p>
+    </div>
+  </section>
+
+  <!-- ======= Destinos em Destaque ======= -->
+  <section class="destinos">
+    <div class="titulo-container">
+      <h2>Destinos em Destaque</h2>
+      <a href="#" class="ver-todos">Ver todos →</a>
+    </div>
+
+    <div class="grid-destinos listaDestinos">
+      <div class="card" data-nome="Bali Indonésia">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+        <div class="info">
+          <p class="pais">🇮🇩 Indonésia</p>
+          <h3>Bali</h3>
+          <p class="pessoas">👥 234</p>
+        </div>
+      </div>
+
+      <div class="card" data-nome="Alpes Suíços Suíça">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Alpes Suíços">
+        <div class="info">
+          <p class="pais">🇨🇭 Suíça</p>
+          <h3>Alpes Suíços</h3>
+          <p class="pessoas">👥 189</p>
+        </div>
+      </div>
+
+      <div class="card" data-nome="Nova York Estados Unidos">
+        <img src="/IMG/NovaYork.webp" alt="Nova York">
+        <div class="info">
+          <p class="pais">🇺🇸 Estados Unidos</p>
+          <h3>Nova York</h3>
+          <p class="pessoas">👥 412</p>
+        </div>
+      </div>
+
+      <div class="card" data-nome="Paris França">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+        <div class="info">
+          <p class="pais">🇫🇷 França</p>
+          <h3>Paris</h3>
+          <p class="pessoas">👥 567</p>
+        </div>
+      </div>
+
+      <div class="card" data-nome="Kyoto Japão">
+        <img src="/IMG/Kyoto.webp" alt="Kyoto">
+        <div class="info">
+          <p class="pais">🇯🇵 Japão</p>
+          <h3>Kyoto</h3>
+          <p class="pessoas">👥 298</p>
+        </div>
+      </div>
+
+      <div class="card" data-nome="Dubai Emirados Árabes">
+        <img src="/IMG/Dubai.jpg" alt="Dubai">
+        <div class="info">
+          <p class="pais">🇦🇪 Emirados Árabes</p>
+          <h3>Dubai</h3>
+          <p class="pessoas">👥 321</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Como Funciona ======= -->
+  <section class="como-funciona" id="como-funciona">
+    <h2>Como funciona</h2>
+    <div class="passos">
+      <div class="passo">
+        <img src="/IMG/passo1.png" alt="Crie seu perfil">
+        <h3>1. Crie seu perfil</h3>
+        <p>Cadastre-se e conte um pouco sobre você e suas preferências de viagem.</p>
+      </div>
+      <div class="passo">
+        <img src="/IMG/passo2.png" alt="Encontre companheiros">
+        <h3>2. Encontre companheiros</h3>
+        <p>Pesquise viajantes com interesses parecidos e entre em contato.</p>
+      </div>
+      <div class="passo">
+        <img src="/IMG/passo3.png" alt="Parta para a viagem">
+        <h3>3. Parta para a viagem!</h3>
+        <p>Viva experiências incríveis ao redor do mundo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Rodapé ======= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col brand">
+        <h3 class="logo"><img src="/IMG/_LOGO_ (1).png">RoamMates</h3>
+        <p>Conectando viajantes ao redor do mundo desde 2025</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre o Projeto</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#">Nossa Equipe</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Código de Conduta</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>📧 contato@roammates.com</p>
+        <p>📍 Taquara, Brasil</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 RoamMates. Todos os direitos reservados.</p>
+      <p>Desenvolvido com ❤️ para conectar viajantes</p>
+    </div>
+  </footer>
+
+  <script src="/JS/script.js"></script>
+</body>
+
+</html>

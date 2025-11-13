@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos de Viagem - RoamMates</title>
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (CDN - versão gratuita) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- ======= Cabeçalho ======= -->
+    <header>
+        <div class="logo">
+            <img src="/IMG/_LOGO_ (1).png" alt="Logo RoamMates">
+            <h1>Roam<span style="color: black;">Mates</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="viajantes.html">Viajantes</a></li>
+                <li><a href="grupos.html" class="ativo">Grupos</a></li>
+                <li><a id="linkLogin" href="login.html">Entrar / Cadastrar</a></li>
+                <li id="usuarioLogado" style="display:none;">
+                    <a id="linkPerfil" href="perfil.html"><span id="nomeUsuario"></span></a>
+                    <button id="btnSair" class="btn-sair">Sair</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Campo de busca -->
+        <div class="busca">
+            <input type="text" id="campoBusca" placeholder="Buscar destino, cidade ou viajante...">
+            <button id="btnBusca ar" aria-label="Buscar">
+                <i class="fa fa-search"></i></button>
+        </div>
+    </header>
+
+    <section class="destinos">
+        <div class="titulo-container">
+            <h2>Grupos Populares</h2>
+            <a href="#" class="ver-todos">Ver todos →</a>
+        </div>
+        <main class="grid-destinos listaDestinos">
+
+            <div class="card" data-nome="Aventura nos Alpes">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Alpes Suíços">
+                <div class="info">
+                    <h3>Aventura nos Alpes</h3>
+                    <p>🏔️ Suíça</p>
+                    <p class="membros">👥 48 membros</p>
+                    <div class="tags">
+                        <span>#Aventura</span>
+                        <span>#Neve</span>
+                        <span>#Mochilão</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="entrar">Entrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Explorando o Japão">
+                <img src="/IMG/japao.jpeg" alt="Japão">
+                <div class="info">
+                    <h3>Explorando o Japão</h3>
+                    <p>🎎 Japão</p>
+                    <p class="membros">👥 62 membros</p>
+                    <div class="tags">
+                        <span>#Cultura</span>
+                        <span>#Gastronomia</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="entrar">Entrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Praias do Nordeste">
+                <img src="/IMG/nordeste.jpeg" alt="Praia">
+                <div class="info">
+                    <h3>Praias do Nordeste</h3>
+                    <p>🌴 Brasil</p>
+                    <p class="membros">👥 105 membros</p>
+                    <div class="tags">
+                        <span>#Praia</span>
+                        <span>#Sol</span>
+                        <span>#Férias</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="entrar">Entrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Rota das Vinhas">
+                <img src="/IMG/rotadasvinhas.jpeg" alt="Vinhas">
+                <div class="info">
+                    <h3>Rota das Vinhas</h3>
+                    <p>🍷 Portugal</p>
+                    <p class="membros">👥 34 membros</p>
+                    <div class="tags">
+                        <span>#Gastronomia</span>
+                        <span>#Cultura</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="entrar">Entrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Deserto do Saara">
+                <img src="/IMG/saara.jpeg" alt="Saara">
+                <div class="info">
+                    <h3>Deserto do Saara</h3>
+                    <p>🏜️ Marrocos</p>
+                    <p class="membros">👥 29 membros</p>
+                    <div class="tags">
+                        <span>#Aventura</span>
+                        <span>#Cultura</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="entrar">Entrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Desvendando o Sul">
+                <img src="/IMG/riograndedosul.jpeg" alt="Sul">
+                <div class="info">
+                    <h3>Desvendando o Sul</h3>
+                    <p>🏜️ Rio Grande do Sul</p>
+                    <p class="membros">👥 29 membros</p>
+                    <div class="tags">
+                        <span>#Aventura</span>
+                        <span>#Cultura</span>
+                    </div>
+                    <div class="botoes">
+                        <button class="entrar">Entrar</button>
+                    </div>
+                </div>
+            </div>
+            <section />
+        </main>
+        <script src="/JS/script.js"></script>
+</body>
+
+</html>

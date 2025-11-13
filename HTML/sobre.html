@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - RoamMates</title>
+
+  <link rel="stylesheet" href="/CSS/sobre.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="/IMG/_LOGO_ (1).png" alt="Logo RoamMates">
+      <h1>Roam<span style="color: black;">Mates</span></h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="destinos.html">Destinos</a></li>
+        <li><a href="viajantes.html">Viajantes</a></li>
+        <li><a href="grupos.html">Grupos</a></li>
+        <li><a id="linkLogin" href="login.html">Entrar / Cadastrar</a></li>
+
+        <li id="usuarioLogado" style="display:none;">
+          <a id="linkPerfil" href="perfil.html"><span id="nomeUsuario"></span></a>
+          <button id="btnSair" class="btn-sair"><a href="index.html" style="color: white;">Sair</a></button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Sobre o RoamMates</h1>
+      <p>O <strong>RoamMates</strong> nasceu da ideia de conectar pessoas que compartilham o amor por viajar. Aqui,
+        você encontra companheiros de viagem, troca experiências e descobre novos destinos.</p>
+    </section>
+
+    <section class="missao">
+      <h2>Nossa missão</h2>
+      <p>Facilitar conexões entre viajantes e promover experiências únicas ao redor do mundo. Acreditamos que viajar é
+        melhor quando compartilhado — novas amizades, histórias e culturas tornam o caminho inesquecível.</p>
+    </section>
+
+    <section class="como-funciona">
+      <h2>Como funciona</h2>
+      <div class="passos">
+        <div class="card">
+          <h3>1. Crie seu perfil</h3>
+          <p>Conte um pouco sobre você e seus destinos dos sonhos.</p>
+        </div>
+        <div class="card">
+          <h3>2. Encontre companhias</h3>
+          <p>Explore perfis e encontre pessoas com planos parecidos com os seus.</p>
+        </div>
+        <div class="card">
+          <h3>3. Conecte-se</h3>
+          <p>Use o chat integrado para planejar juntos a próxima aventura!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="valores">
+      <h2>Valores que nos guiam</h2>
+      <ul>
+        <li>🌍 Respeito e diversidade cultural</li>
+        <li>🤝 Amizade e confiança</li>
+        <li>✨ Autenticidade e segurança</li>
+      </ul>
+    </section>
+
+    <section class="equipe">
+      <h2>Conheça o time RoamMates</h2>
+      <div class="membros">
+        <div class="membro">
+          <img src="/IMG/Foto - Sara Amabili Castilhos.jpeg" alt="Sara Amabili" />
+          <h3>Sara Amabili</h3>
+          <p>UX Designer e idealizadora do projeto. Apaixonada por criar experiências que conectam pessoas e culturas.
+          </p>
+        </div>
+        <div class="membro">
+          <img src="/IMG/LucasIan.png" alt="Lucas Ian" />
+          <h3>Lucas Ian</h3>
+          <p>Desenvolvedor Front-end. Focado em transformar boas ideias em interfaces intuitivas e modernas.</p>
+        </div>
+        <div class="membro">
+          <img src="/IMG/RianaAnjos.png" alt="Riana Anjos" />
+          <h3>Riana Anjos</h3>
+          <p>Gerente de comunidade. Garante que cada viajante tenha uma experiência segura e acolhedora.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Pronto para encontrar seu próximo parceiro de viagem?</h2>
+      <a href="cadastro.html" class="btn">Junte-se ao RoamMates</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 RoamMates • Conectando viajantes pelo mundo</p>
+  </footer>
+
+  <script>
+    // Animação suave ao rolar
+    const cards = document.querySelectorAll('.card, .membro');
+    window.addEventListener('scroll', () => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) card.classList.add('visivel');
+      });
+    });
+
+    const usuarioAtivo = JSON.parse(localStorage.getItem('usuarioLogado'));
+    const nomeUsuario = document.getElementById('nomeUsuario');
+    const linkLogin = document.getElementById('linkLogin');
+    const usuarioLogadoEl = document.getElementById('usuarioLogado');
+    const btnSair = document.getElementById('btnSair');
+
+    if (usuarioAtivo) {
+      nomeUsuario.textContent = `Olá, ${usuarioAtivo.nome.split(' ')[0]}!`;
+      usuarioLogadoEl.style.display = 'flex';
+      linkLogin.style.display = 'none';
+    } else {
+      usuarioLogadoEl.style.display = 'none';
+      linkLogin.style.display = 'inline';
+    }
+
+    btnSair?.addEventListener('click', () => {
+      localStorage.removeItem('usuarioLogado');
+      alert('Você saiu da sua conta.');
+      window.location.reload();
+    });
+  </script>
+</body>
+
+</html>

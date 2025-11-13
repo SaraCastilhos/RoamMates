@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - RoamMates</title>
+
+  <link rel="stylesheet" href="/CSS/loginEcadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (CDN - versão gratuita) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <div class="auth-container">
+    <h2>Entrar</h2>
+    <form id="formLogin">
+      <input type="email" id="emailLogin" placeholder="E-mail" required>
+      <input type="password" id="senhaLogin" placeholder="Senha" required>
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+
+    <p>Não tem conta? <a href="cadastro.html">Cadastrar-se</a></p>
+
+    <div class="social-login">
+      <p>Ou entre com:</p>
+      <button class="google"><i class="fab fa-google"></i></a>Google</button>
+      <button class="facebook"><i class="fab fa-facebook"></i></a>Facebook</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', e => {
+      e.preventDefault();
+
+      const email = document.getElementById('emailLogin').value.trim().toLowerCase();
+      const senha = document.getElementById('senhaLogin').value;
+
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+      const usuario = usuarios.find(u => u.email === email && u.senha === senha);
+
+      if (usuario) {
+        // Armazena o usuário logado
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+
+        alert(`Bem-vindo(a), ${usuario.nome}!`);
+
+        // ✅ Redireciona para o perfil do usuário logado
+        window.location.href = 'perfil.html';
+      } else {
+        alert('E-mail ou senha incorretos.');
+      }
+    });
+  </script>
+</body>
+
+</html>

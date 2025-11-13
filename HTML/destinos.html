@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoamMates - Encontre sua companhia de viagem</title>
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (CDN - versão gratuita) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- ======= Cabeçalho ======= -->
+    <header>
+        <div class="logo">
+            <img src="/IMG/_LOGO_ (1).png" alt="Logo RoamMates">
+            <h1>Roam<span style="color: black;">Mates</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="destinos.html" class="ativo">Destinos</a></li>
+                <li><a href="viajantes.html">Viajantes</a></li>
+                <li><a href="grupos.html">Grupos</a></li>
+                <li><a id="linkLogin" href="login.html">Entrar / Cadastrar</a></li>
+                <li id="usuarioLogado" style="display:none;">
+                    <a id="linkPerfil" href="perfil.html"><span id="nomeUsuario"></span></a>
+                    <button id="btnSair" class="btn-sair">Sair</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Campo de busca -->
+        <div class="busca">
+            <input type="text" id="campoBusca" placeholder="Buscar destino, cidade ou viajante...">
+            <button id="btnBusca ar" aria-label="Buscar">
+                <i class="fa fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- ======= Destinos em Destaque ======= -->
+    <section class="destinos">
+        <div class="titulo-container">
+            <h2>Destinos em Destaque</h2>
+            <a href="#" class="ver-todos">Ver todos →</a>
+        </div>
+
+        <div class="grid-destinos listaDestinos">
+            <div class="card" data-nome="Bali Indonésia">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+                <div class="info">
+                    <p class="pais">🇮🇩 Indonésia</p>
+                    <h3>Bali</h3>
+                    <p class="pessoas">👥 234</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Alpes Suíços Suíça">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Alpes Suíços">
+                <div class="info">
+                    <p class="pais">🇨🇭 Suíça</p>
+                    <h3>Alpes Suíços</h3>
+                    <p class="pessoas">👥 189</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Nova York Estados Unidos">
+                <img src="/IMG/NovaYork.webp" alt="Nova York">
+                <div class="info">
+                    <p class="pais">🇺🇸 Estados Unidos</p>
+                    <h3>Nova York</h3>
+                    <p class="pessoas">👥 412</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Paris França">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+                <div class="info">
+                    <p class="pais">🇫🇷 França</p>
+                    <h3>Paris</h3>
+                    <p class="pessoas">👥 567</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Kyoto Japão">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523" alt="Kyoto">
+                <div class="info">
+                    <p class="pais">🇯🇵 Japão</p>
+                    <h3>Kyoto</h3>
+                    <p class="pessoas">👥 298</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Dubai Emirados Árabes">
+                <img src="/IMG/Dubai.jpg" alt="Dubai">
+                <div class="info">
+                    <p class="pais">🇦🇪 Emirados Árabes</p>
+                    <h3>Dubai</h3>
+                    <p class="pessoas">👥 321</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinos">
+        <div class="titulo-container">
+            <h2>Viagens Populares</h2>
+            <a href="#" class="ver-todos">Ver todos →</a>
+        </div>
+
+        <div class="grid-destinos listaDestinos">
+            <div class="card" data-nome="Santorini Grécia">
+                <img src="/IMG/santorini.jpg" alt="Santorini">
+                <div class="info">
+                    <p class="pais">🇬🇷 Grécia</p>
+                    <h3>Santorini</h3>
+                    <p class="pessoas">👥 264</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Londres Reino Unido">
+                <img src="/IMG/londres.jpg" alt="Londres">
+                <div class="info">
+                    <p class="pais">🇬🇧 Reino Unido</p>
+                    <h3>Londres</h3>
+                    <p class="pessoas">👥 391</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Rio de Janeiro Brasil">
+                <img src="/IMG/riodejaneiro.jpg" alt="Rio de Janeiro">
+                <div class="info">
+                    <p class="pais">🇧🇷 Brasil</p>
+                    <h3>Rio de Janeiro</h3>
+                    <p class="pessoas">👥 478</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Roma Itália">
+                <img src="/IMG/roma.jpg" alt="Roma">
+                <div class="info">
+                    <p class="pais">🇮🇹 Itália</p>
+                    <h3>Roma</h3>
+                    <p class="pessoas">👥 533</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Sydney Austrália">
+                <img src="/IMG/sydney.jpg" alt="Sydney">
+                <div class="info">
+                    <p class="pais">🇦🇺 Austrália</p>
+                    <h3>Sydney</h3>
+                    <p class="pessoas">👥 312</p>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Toronto Canadá">
+                <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80"
+                    alt="Toronto">
+                <div class="info">
+                    <p class="pais">🇨🇦 Canadá</p>
+                    <h3>Toronto</h3>
+                    <p class="pessoas">👥 276</p>
+                </div>
+            </div>
+
+            <script src="/JS/script.js"></script>
+</body>
+
+</html>

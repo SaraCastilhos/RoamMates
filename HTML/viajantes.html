@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Viajantes - RoamMates</title>
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (CDN - versão gratuita) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- ======= Cabeçalho ======= -->
+    <header>
+        <div class="logo">
+            <img src="/IMG/_LOGO_ (1).png" alt="Logo RoamMates">
+            <h1>Roam<span style="color: black;">Mates</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="viajantes.html" class="ativo">Viajantes</a></li>
+                <li><a href="grupos.html">Grupos</a></li>
+                <li><a id="linkLogin" href="login.html">Entrar / Cadastrar</a></li>
+                <li id="usuarioLogado" style="display:none;">
+                    <a id="linkPerfil" href="perfil.html"><span id="nomeUsuario"></span></a>
+                    <button id="btnSair" class="btn-sair">Sair</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Campo de busca -->
+        <div class="busca">
+            <input type="text" id="campoBusca" placeholder="Buscar destino, cidade ou viajante...">
+            <button id="btnBusca ar" aria-label="Buscar">
+                <i class="fa fa-search"></i></button>
+        </div>
+    </header>
+
+    <!--Viajantes-->
+    <section class="destinos">
+        <div class="titulo-container">
+            <h2>Viajantes Ativos na Comunidade</h2>
+            <a href="#" class="ver-todos">Ver todos →</a>
+        </div>
+
+        <main class="grid-destinos listaDestinos">
+            <div class="card" data-nome="Ana S.">
+                <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe" alt="Ana">
+                <div class="info">
+                    <h3>Ana S.</h3>
+                    <p>📍 Espanha</p>
+                    <div class="botoes">
+                        <button class="perfil">Ver Perfil</button>
+                        <button class="add">➕ Amigo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Fatima K.">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Fatima">
+                <div class="info">
+                    <h3>Fatima K.</h3>
+                    <p>📍 Itália</p>
+                    <div class="botoes">
+                        <button class="perfil">Ver Perfil</button>
+                        <button class="add">➕ Amigo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Chen W.">
+                <img src="/IMG/Chen.png" alt="Chen">
+                <div class="info">
+                    <h3>Chen W.</h3>
+                    <p>📍 Japão</p>
+                    <div class="botoes">
+                        <button class="perfil">Ver Perfil</button>
+                        <button class="add">➕ Amigo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Priya R.">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Priya">
+                <div class="info">
+                    <h3>Priya R.</h3>
+                    <p>📍 Índia</p>
+                    <div class="botoes">
+                        <button class="perfil">Ver Perfil</button>
+                        <button class="add">➕ Amigo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Juliana E.">
+                <img src="/IMG/Juliana.png" alt="Juliana">
+                <div class="info">
+                    <h3>Juliana E.</h3>
+                    <p>📍 México</p>
+                    <div class="botoes">
+                        <button class="perfil">Ver Perfil</button>
+                        <button class="add">➕ Amigo</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-nome="Gabriel S.">
+                <img src="/IMG/Gabriel.png" alt="Gabriel">
+                <div class="info">
+                    <h3>Gabriel S.</h3>
+                    <p>📍 França</p>
+                    <div class="botoes">
+                        <button class="perfil">Ver Perfil</button>
+                        <button class="add">➕ Amigo</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    </main>
+    <script src="/JS/script.js"></script>
+</body>
+
+</html>

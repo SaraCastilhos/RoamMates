@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - RoamMates</title>
+
+  <link rel="stylesheet" href="/CSS/chat.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (CDN - versão gratuita) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-eNSY1k9f0t1w1k9qkz5mZ1m3b5i1e5f7f6x9k8j7..." crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- LISTA DE CONVERSAS -->
+    <aside class="lista">
+      <header>
+        <div class="voltar1">
+          <div class="voltar"><a href="perfil.html"><i data-lucide="arrow-left"></i></a></div>
+          <h2>Conversas</h2>
+        </div>
+        <span id="usuarioLogado">@usuario</span>
+      </header>
+
+      <div class="busca">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Buscar conversa...">
+      </div>
+
+      <div class="contatos" id="listaContatos">
+        <!-- contatos adicionados dinamicamente -->
+      </div>
+    </aside>
+
+    <!-- CHAT ABERTO -->
+    <section class="chat">
+      <header class="topo-chat">
+
+        <div class="voltar2">
+          <div class="voltar" onclick="voltarLista()"><i data-lucide="arrow-left"></i></div>
+          <img id="fotoContato" src="" alt="Contato">
+          <div>
+            <h3 id="nomeContato">Selecione um contato</h3>
+            <p id="usuarioContato"></p>
+          </div>
+        </div>
+
+        <div class="acoes">
+          <i data-lucide="phone"></i>
+          <i data-lucide="video"></i>
+        </div>
+
+      </header>
+
+      <div class="mensagens" id="mensagens"></div>
+
+      <div class="input-area">
+        <i data-lucide="image"></i>
+        <input type="text" id="mensagemInput" placeholder="Digite sua mensagem...">
+        <button id="enviarBtn"><i data-lucide="send"></i></button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/JS/chat.js"></script>
+</body>
+
+</html>

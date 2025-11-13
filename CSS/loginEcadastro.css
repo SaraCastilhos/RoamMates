@@ -1,0 +1,99 @@
+/* ======= Login e Cadastro ======= */
+* {
+  font-family: 'Lora', sans-serif;
+}
+
+body {
+  background-color: #8ed1e32f;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.377);
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #00B5C5;
+  margin-bottom: 20px;
+}
+
+.auth-container p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.auth-container input {
+  background-color: #f5f0f038;
+  min-width: 370px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-container input:focus {
+  border-color: #00B5C5;
+  box-shadow: 0 0 5px rgba(0, 181, 197, 0.3);
+}
+
+.auth-container .btn {
+  background-color: #00b5c5ba;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 25px;
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-container .btn:hover {
+  background-color: #00B5C5;
+}
+
+a {
+  color: #F49B63;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  margin-top: 10px;
+}
+
+.social-login button {
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 40%;
+  cursor: pointer;
+}
+
+i {
+  color: white;
+  margin-inline-end: 10px;
+}
+
+.google {
+  background: #F49B63;
+  color: white;
+  font-weight: 600;
+}
+
+.facebook {
+  background: #1876f2c5;
+  color: white;
+}
